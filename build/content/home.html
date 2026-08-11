@@ -1,0 +1,423 @@
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-badge" src="/images/badge-200.svg" alt="Jusqu'à 200€ offerts">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Nord Pas-de-Calais — 59 &amp; 62</span>
+        <h1>Pare-brise cassé<br>ou fissuré ?<br><span class="highlight">Jusqu'à 200€ offerts</span></h1>
+        <p class="hero-sub">
+          Pour votre remplacement, à domicile, sans avance de frais. Un technicien certifié
+          se déplace chez vous ou sur votre lieu de travail, où que vous soyez dans le 59 et le 62.
+        </p>
+        <ul class="hero-points">
+          <li>✅ 0€ d'avance</li>
+          <li>✅ À domicile</li>
+          <li>✅ Toutes assurances</li>
+        </ul>
+        <div class="hero-cta-row">
+          <a href="#combien" class="btn btn-primary btn-lg">Vérifier mon offre</a>
+          <a href="tel:0757634251" class="hero-tel">📞 07 57 63 42 51</a>
+        </div>
+      </div>
+      <img class="hero-person" src="/images/technicien.png" alt="Technicien Cadeaux Pare-Brise prêt à intervenir">
+    </div>
+  </section>
+
+  <!-- REASSURANCE -->
+  <section class="trust-bar">
+    <div class="container trust-grid">
+      <div class="trust-item"><span>💶</span> 0€ avance</div>
+      <div class="trust-item"><span>📍</span> 59 &amp; 62</div>
+      <div class="trust-item"><span>🚗</span> Toutes assurances</div>
+      <div class="trust-item"><span>🏠</span> À domicile</div>
+    </div>
+  </section>
+
+  <!-- COMBIEN -->
+  <section class="section" id="combien">
+    <div class="container section-grid">
+      <div>
+        <span class="section-eyebrow">Votre éligibilité</span>
+        <h2>Combien pouvez-vous recevoir ?</h2>
+        <p class="section-lead">
+          Répondez à 3 questions simples : votre code postal, le vitrage concerné et votre assurance.
+          Un conseiller confirme votre éligibilité et le montant auquel vous avez droit — sans avance de frais.
+        </p>
+        <ul class="check-list">
+          <li>Réponse en 30 secondes, sans engagement</li>
+          <li>Vérification immédiate de votre prise en charge assurance</li>
+          <li>Un conseiller vous rappelle sous 2 minutes en heures ouvrées</li>
+        </ul>
+        <img src="/images/billets.svg" alt="Jusqu'à 200€ versés par virement bancaire" class="combien-visual">
+      </div>
+
+      <div class="form-card" id="leadForm">
+        <div class="form-card-header">
+          <h2>Suis-je éligible aux 200€ ?</h2>
+          <p>3 questions, 30 secondes.</p>
+          <div class="progress-track" aria-hidden="true">
+            <span class="progress-step active" data-step-indicator="1"></span>
+            <span class="progress-step" data-step-indicator="2"></span>
+            <span class="progress-step" data-step-indicator="3"></span>
+            <span class="progress-step" data-step-indicator="4"></span>
+          </div>
+        </div>
+
+        <form class="quote-form" id="quoteForm" novalidate>
+          <input type="hidden" name="utm_source">
+          <input type="hidden" name="utm_medium">
+          <input type="hidden" name="utm_campaign">
+          <input type="hidden" name="utm_term">
+          <input type="hidden" name="utm_content">
+          <input type="hidden" name="gclid">
+          <input type="hidden" name="fbclid">
+          <input type="hidden" name="page_url">
+
+          <div class="form-step active" data-step="1">
+            <label for="cp">Votre code postal</label>
+            <input type="text" id="cp" name="cp" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Ex : 59000" required>
+            <p class="field-hint">Nous intervenons uniquement dans le 59 et le 62.</p>
+            <button type="button" class="btn btn-primary btn-block" data-next>Continuer</button>
+          </div>
+
+          <div class="form-step" data-step="2">
+            <label for="vitrage">Quel vitrage est concerné ?</label>
+            <div class="choice-grid">
+              <button type="button" class="choice-btn" data-field="vitrage" data-value="Pare-brise">Pare-brise</button>
+              <button type="button" class="choice-btn" data-field="vitrage" data-value="Fissure / Éclat">Fissure / Éclat</button>
+              <button type="button" class="choice-btn" data-field="vitrage" data-value="Lunette arrière">Lunette arrière</button>
+              <button type="button" class="choice-btn" data-field="vitrage" data-value="Glace latérale">Glace latérale</button>
+            </div>
+            <button type="button" class="btn btn-ghost btn-block" data-prev>Retour</button>
+          </div>
+
+          <div class="form-step" data-step="3">
+            <label for="assurance">Votre assurance auto</label>
+            <select id="assurance" name="assurance" required>
+              <option value="" disabled selected>Sélectionnez votre assureur</option>
+              <option>AXA</option>
+              <option>MAIF</option>
+              <option>MACIF</option>
+              <option>Allianz</option>
+              <option>MAAF</option>
+              <option>GMF</option>
+              <option>MMA</option>
+              <option>Groupama</option>
+              <option>Matmut</option>
+              <option>Autre / Je ne sais pas</option>
+            </select>
+            <div class="step-actions">
+              <button type="button" class="btn btn-ghost" data-prev>Retour</button>
+              <button type="button" class="btn btn-primary" data-next>Continuer</button>
+            </div>
+          </div>
+
+          <div class="form-step" data-step="4">
+            <label for="nom">Vos coordonnées</label>
+            <input type="text" id="nom" name="nom" placeholder="Nom et prénom" required>
+            <input type="tel" id="tel" name="tel" placeholder="Ex : 06 12 34 56 78" required>
+            <p class="field-hint">🔒 Un conseiller vous rappelle sous 2 minutes en heures ouvrées. Vos données restent confidentielles.</p>
+            <div class="step-actions">
+              <button type="button" class="btn btn-ghost" data-prev>Retour</button>
+              <button type="submit" class="btn btn-primary">Voir mon offre</button>
+            </div>
+          </div>
+
+          <div class="form-step form-loading" data-step="loading">
+            <div class="loading-spinner" aria-hidden="true"></div>
+            <h3 class="loading-text">Vérification de votre éligibilité…</h3>
+            <p class="field-hint">Merci de patienter quelques secondes.</p>
+          </div>
+
+          <div class="form-step form-success" data-step="success">
+            <div class="success-icon">🎉</div>
+            <h3>Demande bien reçue !</h3>
+            <p>Un conseiller vous rappelle très prochainement pour confirmer votre éligibilité aux 200€ et planifier votre intervention.</p>
+            <dl class="recap-list">
+              <div><dt>Code postal</dt><dd data-recap="cp">—</dd></div>
+              <div><dt>Vitrage</dt><dd data-recap="vitrage">—</dd></div>
+              <div><dt>Assurance</dt><dd data-recap="assurance">—</dd></div>
+            </dl>
+            <p class="field-hint">Une urgence ? Appelez directement le <a href="tel:0757634251">07 57 63 42 51</a>.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <p class="hero-disclaimer container" style="color: var(--muted); margin-top: 40px;">
+      * Jusqu'à 200€ versés par virement bancaire après le remplacement de votre pare-brise, selon votre véhicule et votre contrat d'assurance.
+      Offre non cumulable, une par véhicule. <a href="/faq/">Voir conditions.</a>
+    </p>
+  </section>
+
+  <!-- PREUVES REELLES -->
+  <section class="section section-alt" id="terrain">
+    <div class="container">
+      <div class="section-heading-center">
+        <span class="section-eyebrow">Preuves réelles</span>
+        <h2>De vrais techniciens. De vraies interventions.</h2>
+        <p class="section-lead">Remplacement directement à votre domicile ou sur votre lieu de travail, avec un équipement professionnel complet.</p>
+      </div>
+      <div class="photo-grid">
+        <figure class="photo-card">
+          <img src="/images/technicien-verif.png" alt="Technicien Cadeaux Pare-Brise posant un pare-brise à domicile devant sa camionnette floquée">
+          <figcaption>Intervention à domicile, camion atelier sur place</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="/images/technicien-pose.png" alt="Technicien posant un pare-brise avec des ventouses professionnelles">
+          <figcaption>Pose réalisée avec un équipement certifié</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ASSURANCE -->
+  <section class="section" id="assurance">
+    <div class="section-heading-center container">
+      <span class="section-eyebrow">Assurance &amp; prise en charge</span>
+      <h2>Quelle est votre assurance ?</h2>
+      <p class="section-lead">La quasi-totalité des contrats auto tous risques incluent la garantie bris de glace. Choisissez votre assureur pour voir comment fonctionne votre prise en charge.</p>
+    </div>
+    <div class="container">
+      <div class="insurer-cards-grid">
+        <a href="/assurances/axa/" class="insurer-tile">AXA</a>
+        <a href="/assurances/maif/" class="insurer-tile">MAIF</a>
+        <a href="/assurances/macif/" class="insurer-tile">MACIF</a>
+        <a href="/assurances/allianz/" class="insurer-tile">Allianz</a>
+        <a href="/assurances/maaf/" class="insurer-tile">MAAF</a>
+        <a href="/assurances/gmf/" class="insurer-tile">GMF</a>
+        <a href="/assurances/mma/" class="insurer-tile">MMA</a>
+        <a href="/assurances/groupama/" class="insurer-tile">Groupama</a>
+        <a href="/assurances/matmut/" class="insurer-tile">Matmut</a>
+        <a href="/assurances/direct-assurance/" class="insurer-tile">Direct Assurance</a>
+        <a href="/assurances/credit-mutuel/" class="insurer-tile">Crédit Mutuel</a>
+        <a href="/assurances/cic/" class="insurer-tile">CIC</a>
+      </div>
+      <p class="zones-note">Votre assureur n'est pas dans la liste ? <a href="#" data-open-tunnel>Vérifiez votre éligibilité</a> quand même, nous travaillons avec toutes les compagnies.</p>
+    </div>
+  </section>
+
+  <!-- COMMENT CA MARCHE -->
+  <section class="section section-alt" id="comment-ca-marche">
+    <div class="container">
+      <div class="section-heading-center">
+        <span class="section-eyebrow">Simple &amp; rapide</span>
+        <h2>Comment fonctionne l'offre des 200€ ?</h2>
+        <p class="section-lead">4 étapes, sans vous déplacer, sans avancer un centime.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <h3>Demande de rappel</h3>
+          <p>Remplissez le formulaire ou appelez-nous. Un conseiller vous contacte en quelques minutes.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <h3>Rendez-vous à domicile</h3>
+          <p>Nous planifions l'intervention chez vous ou sur votre lieu de travail, au créneau qui vous convient.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <h3>Intervention rapide</h3>
+          <p>Notre technicien certifié intervient en 1h à 2h. Vous n'avez pas à vous déplacer.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">4</span>
+          <h3>Vos 200€ versés</h3>
+          <p>Pare-brise neuf, calibrage ADAS si nécessaire, et virement sous quelques jours.<sup>*</sup></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIES -->
+  <section class="section" id="garanties">
+    <div class="container">
+      <div class="section-heading-center">
+        <span class="section-eyebrow">Nos garanties</span>
+        <h2>Un service pensé pour ne rien avoir à gérer</h2>
+      </div>
+      <div class="advantages-grid">
+        <div class="advantage-card">
+          <span class="advantage-icon">🏠</span>
+          <h3>Intervention à domicile</h3>
+          <p>Chez vous, au travail ou sur votre parking. Vous ne bougez pas, on vient à vous.</p>
+        </div>
+        <div class="advantage-card">
+          <span class="advantage-icon">💶</span>
+          <h3>0€ d'avance de frais</h3>
+          <p>Facturation directe à votre assurance. Vous ne payez que votre franchise éventuelle.</p>
+        </div>
+        <div class="advantage-card">
+          <span class="advantage-icon">🎯</span>
+          <h3>Techniciens certifiés</h3>
+          <p>Pare-brises d'origine constructeur ou équivalent certifié, pose garantie.</p>
+        </div>
+        <div class="advantage-card">
+          <span class="advantage-icon">📡</span>
+          <h3>Calibrage ADAS inclus</h3>
+          <p>Recalibrage des caméras et capteurs d'aide à la conduite, sans supplément.</p>
+        </div>
+        <div class="advantage-card">
+          <span class="advantage-icon">🛡️</span>
+          <h3>Garantie 10 ans</h3>
+          <p>Étanchéité et pose garanties 10 ans sur l'ensemble de nos interventions.</p>
+        </div>
+        <div class="advantage-card">
+          <span class="advantage-icon">💰</span>
+          <h3>Jusqu'à 200€ offerts</h3>
+          <p>Versés par virement bancaire après votre remplacement, sous conditions.<sup>*</sup></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POURQUOI -->
+  <section class="section section-alt why-section">
+    <div class="container why-grid">
+      <div class="why-copy">
+        <span class="section-eyebrow">Notre philosophie</span>
+        <h2>Pourquoi s'appeler Cadeaux Pare-Brise ?</h2>
+        <p class="why-tagline">Le spécialiste du pare-brise qui récompense ses clients.</p>
+        <p class="section-lead">
+          Parce que remplacer son pare-brise ne devrait pas être seulement une contrainte.
+          Selon votre véhicule, votre contrat et votre franchise, vous pouvez bénéficier
+          d'une offre commerciale pouvant aller jusqu'à 200€ — en plus d'un remplacement
+          pris en charge par votre assurance, sans avance de frais. Votre pare-brise remplacé.
+          Votre cadeau en plus.
+        </p>
+        <div class="hero-cta-row" style="margin-top:0;">
+          <a href="#" class="btn btn-primary" data-open-tunnel>Vérifier mon offre</a>
+          <a href="/notre-cadeau/" class="btn btn-ghost">Découvrir notre cadeau</a>
+        </div>
+      </div>
+      <div class="why-figure">
+        <span class="why-emoji">🎁</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVIS -->
+  <section class="section" id="avis-preview">
+    <div class="container">
+      <div class="section-heading-center">
+        <span class="section-eyebrow">Avis clients</span>
+        <h2>Ce que disent nos clients</h2>
+        <p class="section-lead">Les premiers avis vérifiés de nos clients du Nord Pas-de-Calais arrivent bientôt sur cette page.</p>
+      </div>
+      <div class="review-grid">
+        <div class="review-card review-placeholder">
+          <div class="review-stars">★★★★★</div>
+          <p>« [Avis client à ajouter après intervention] »</p>
+          <p class="review-author">— Prénom, Ville · Véhicule</p>
+        </div>
+        <div class="review-card review-placeholder">
+          <div class="review-stars">★★★★★</div>
+          <p>« [Avis client à ajouter après intervention] »</p>
+          <p class="review-author">— Prénom, Ville · Véhicule</p>
+        </div>
+        <div class="review-card review-placeholder">
+          <div class="review-stars">★★★★★</div>
+          <p>« [Avis client à ajouter après intervention] »</p>
+          <p class="review-author">— Prénom, Ville · Véhicule</p>
+        </div>
+      </div>
+      <p class="zones-note"><a href="/avis/">Voir tous les avis →</a></p>
+    </div>
+  </section>
+
+  <!-- ZONES -->
+  <section class="section section-alt" id="zones">
+    <div class="container">
+      <div class="section-heading-center">
+        <span class="section-eyebrow">Couverture locale</span>
+        <h2>Nos zones d'intervention</h2>
+        <p class="section-lead">Exclusivement dans le Nord et le Pas-de-Calais, pour garantir des délais courts et un vrai suivi de proximité.</p>
+      </div>
+      <div class="zones-grid">
+        <div class="zone-col">
+          <h3>Nord (59)</h3>
+          <ul>
+            <li><a href="/zones/pare-brise-lille/">Pare-brise Lille</a></li>
+            <li><a href="/zones/pare-brise-lomme/">Pare-brise Lomme</a></li>
+            <li><a href="/zones/pare-brise-roubaix/">Pare-brise Roubaix</a></li>
+            <li><a href="/zones/pare-brise-tourcoing/">Pare-brise Tourcoing</a></li>
+            <li><a href="/zones/pare-brise-villeneuve-dascq/">Pare-brise Villeneuve-d'Ascq</a></li>
+            <li><a href="/zones/pare-brise-douai/">Pare-brise Douai</a></li>
+            <li><a href="/zones/pare-brise-valenciennes/">Pare-brise Valenciennes</a></li>
+          </ul>
+        </div>
+        <div class="zone-col">
+          <h3>Pas-de-Calais (62)</h3>
+          <ul>
+            <li><a href="/zones/pare-brise-lens/">Pare-brise Lens</a></li>
+            <li><a href="/zones/pare-brise-lievin/">Pare-brise Liévin</a></li>
+            <li><a href="/zones/pare-brise-henin-beaumont/">Pare-brise Hénin-Beaumont</a></li>
+            <li><a href="/zones/pare-brise-arras/">Pare-brise Arras</a></li>
+            <li><a href="/zones/pare-brise-bethune/">Pare-brise Béthune</a></li>
+            <li><a href="/zones/pare-brise-calais/">Pare-brise Calais</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="zones-note"><a href="/zones/">Voir toutes les zones desservies →</a></p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-heading-center">
+        <span class="section-eyebrow">Questions fréquentes</span>
+        <h2>Tout savoir sur l'offre des 200€</h2>
+      </div>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary>Comment sont versés les 200€ ?</summary>
+          <div class="faq-answer"><p>Les 200€ sont versés par virement bancaire après la réalisation de votre remplacement de pare-brise, sous réserve d'éligibilité de votre véhicule et de votre contrat d'assurance. Le montant exact vous est confirmé par votre conseiller avant l'intervention.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Le remplacement est-il vraiment sans avance de frais ?</summary>
+          <div class="faq-answer"><p>Oui. Dès lors que votre contrat inclut la garantie bris de glace, nous facturons directement votre assureur. Vous ne réglez que votre franchise éventuelle, le cas échéant, directement au technicien.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Intervenez-vous vraiment à domicile ?</summary>
+          <div class="faq-answer"><p>Oui, nos techniciens se déplacent chez vous, sur votre lieu de travail ou tout autre endroit de votre choix, dans le Nord et le Pas-de-Calais uniquement.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Le calibrage ADAS est-il inclus ?</summary>
+          <div class="faq-answer"><p>Oui, systématiquement et sans supplément lorsque votre véhicule est équipé d'une caméra frontale ou de capteurs d'aide à la conduite.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Quelle garantie sur la pose ?</summary>
+          <div class="faq-answer"><p>Nous offrons une garantie de 10 ans sur l'étanchéité et la pose, avec des pare-brises d'origine constructeur ou équivalent certifié.</p></div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Intervenez-vous dans toute la France ?</summary>
+          <div class="faq-answer"><p>Non, nous intervenons exclusivement dans le Nord et le Pas-de-Calais (59 &amp; 62) afin de garantir des délais d'intervention courts et un vrai suivi de proximité.</p></div>
+        </details>
+
+      </div>
+      <p class="zones-note"><a href="/faq/">Voir toutes les questions →</a></p>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="container cta-final-inner">
+      <div>
+        <span class="cta-tag">Jusqu'à 200€ offerts après votre remplacement</span>
+        <h2>Prêt à faire remplacer votre pare-brise ?</h2>
+        <p>Estimation gratuite en 30 secondes. Intervention sous 24-48h dans le Nord Pas-de-Calais.</p>
+      </div>
+      <div class="cta-final-actions">
+        <a href="tel:0757634251" class="btn btn-white">📞 07 57 63 42 51</a>
+        <a href="#combien" class="btn btn-primary">Vérifier mon éligibilité</a>
+      </div>
+    </div>
+  </section>

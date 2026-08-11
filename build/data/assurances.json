@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "axa",
+    "nom": "AXA",
+    "type": "compagnie d'assurance",
+    "intro": "Comme la plupart des contrats auto tous risques du marché, les contrats AXA incluent généralement la garantie bris de glace, qui couvre le remplacement ou la réparation de votre pare-brise."
+  },
+  {
+    "slug": "maif",
+    "nom": "MAIF",
+    "type": "mutuelle d'assurance",
+    "intro": "En tant que sociétaire MAIF, vous bénéficiez le plus souvent d'une garantie bris de glace incluse dans votre contrat auto, sous réserve des conditions propres à votre formule."
+  },
+  {
+    "slug": "macif",
+    "nom": "MACIF",
+    "type": "mutuelle d'assurance",
+    "intro": "Chez MACIF comme dans la plupart des mutuelles, la garantie bris de glace fait généralement partie des garanties incluses dans les formules tous risques et intermédiaires."
+  },
+  {
+    "slug": "allianz",
+    "nom": "Allianz",
+    "type": "compagnie d'assurance",
+    "intro": "Les contrats Allianz incluent le plus souvent une garantie bris de glace permettant la prise en charge du remplacement de votre pare-brise, selon votre formule."
+  },
+  {
+    "slug": "maaf",
+    "nom": "MAAF",
+    "type": "compagnie d'assurance",
+    "intro": "Comme pour la majorité des assureurs, la garantie bris de glace est généralement intégrée aux contrats auto MAAF tous risques ou intermédiaires."
+  },
+  {
+    "slug": "gmf",
+    "nom": "GMF",
+    "type": "compagnie d'assurance",
+    "intro": "Les assurés GMF disposent le plus souvent d'une garantie bris de glace dans leur contrat auto, couvrant le remplacement ou la réparation du vitrage."
+  },
+  {
+    "slug": "mma",
+    "nom": "MMA",
+    "type": "compagnie d'assurance",
+    "intro": "Chez MMA, la garantie bris de glace fait généralement partie des garanties proposées dans les formules tous risques et intermédiaires."
+  },
+  {
+    "slug": "groupama",
+    "nom": "Groupama",
+    "type": "mutuelle d'assurance",
+    "intro": "Les contrats Groupama incluent le plus souvent une garantie bris de glace, sous réserve des conditions spécifiques à votre formule."
+  },
+  {
+    "slug": "matmut",
+    "nom": "Matmut",
+    "type": "mutuelle d'assurance",
+    "intro": "Comme pour la plupart des mutuelles, la garantie bris de glace est généralement intégrée aux contrats auto Matmut tous risques ou intermédiaires."
+  },
+  {
+    "slug": "direct-assurance",
+    "nom": "Direct Assurance",
+    "type": "assureur 100% en ligne",
+    "intro": "Souscrit en ligne, votre contrat Direct Assurance inclut le plus souvent la garantie bris de glace dans ses formules tous risques et intermédiaires, au même titre que les assureurs traditionnels."
+  },
+  {
+    "slug": "credit-mutuel",
+    "nom": "Crédit Mutuel",
+    "type": "bancassurance",
+    "intro": "Si vous avez souscrit votre assurance auto auprès du Crédit Mutuel, la garantie bris de glace est généralement incluse dans les formules tous risques, comme chez la plupart des bancassureurs."
+  },
+  {
+    "slug": "cic",
+    "nom": "CIC",
+    "type": "bancassurance",
+    "intro": "Comme pour les autres bancassureurs, un contrat auto CIC tous risques inclut généralement la garantie bris de glace, couvrant le remplacement de votre pare-brise."
+  }
+]

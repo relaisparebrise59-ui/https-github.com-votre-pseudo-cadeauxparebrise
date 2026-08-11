@@ -1,0 +1,96 @@
+<div class="tunnel-modal" id="tunnelModal" aria-hidden="true">
+  <div class="tunnel-modal-backdrop" data-close-tunnel></div>
+  <div class="tunnel-modal-panel form-card" role="dialog" aria-modal="true" aria-label="Vérifier mon éligibilité">
+    <button type="button" class="tunnel-modal-close" data-close-tunnel aria-label="Fermer">✕</button>
+    <div class="form-card-header">
+      <h2>Suis-je éligible aux 200€ ?</h2>
+      <p>3 questions, 30 secondes.</p>
+      <div class="progress-track" aria-hidden="true">
+        <span class="progress-step active" data-step-indicator="1"></span>
+        <span class="progress-step" data-step-indicator="2"></span>
+        <span class="progress-step" data-step-indicator="3"></span>
+        <span class="progress-step" data-step-indicator="4"></span>
+      </div>
+    </div>
+
+    <form class="quote-form" novalidate>
+      <input type="hidden" name="utm_source">
+      <input type="hidden" name="utm_medium">
+      <input type="hidden" name="utm_campaign">
+      <input type="hidden" name="utm_term">
+      <input type="hidden" name="utm_content">
+      <input type="hidden" name="gclid">
+      <input type="hidden" name="fbclid">
+      <input type="hidden" name="page_url">
+
+      <div class="form-step active" data-step="1">
+        <label for="cp-m">Votre code postal</label>
+        <input type="text" id="cp-m" name="cp" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Ex : 59000" required>
+        <p class="field-hint">Nous intervenons uniquement dans le 59 et le 62.</p>
+        <button type="button" class="btn btn-primary btn-block" data-next>Continuer</button>
+      </div>
+
+      <div class="form-step" data-step="2">
+        <label for="vitrage-m">Quel vitrage est concerné ?</label>
+        <div class="choice-grid">
+          <button type="button" class="choice-btn" data-field="vitrage" data-value="Pare-brise">Pare-brise</button>
+          <button type="button" class="choice-btn" data-field="vitrage" data-value="Fissure / Éclat">Fissure / Éclat</button>
+          <button type="button" class="choice-btn" data-field="vitrage" data-value="Lunette arrière">Lunette arrière</button>
+          <button type="button" class="choice-btn" data-field="vitrage" data-value="Glace latérale">Glace latérale</button>
+        </div>
+        <button type="button" class="btn btn-ghost btn-block" data-prev>Retour</button>
+      </div>
+
+      <div class="form-step" data-step="3">
+        <label for="assurance-m">Votre assurance auto</label>
+        <select id="assurance-m" name="assurance" required>
+          <option value="" disabled selected>Sélectionnez votre assureur</option>
+          <option>AXA</option>
+          <option>MAIF</option>
+          <option>MACIF</option>
+          <option>Allianz</option>
+          <option>MAAF</option>
+          <option>GMF</option>
+          <option>MMA</option>
+          <option>Groupama</option>
+          <option>Matmut</option>
+          <option>Autre / Je ne sais pas</option>
+        </select>
+        <div class="step-actions">
+          <button type="button" class="btn btn-ghost" data-prev>Retour</button>
+          <button type="button" class="btn btn-primary" data-next>Continuer</button>
+        </div>
+      </div>
+
+      <div class="form-step" data-step="4">
+        <label for="nom-m">Vos coordonnées</label>
+        <input type="text" id="nom-m" name="nom" placeholder="Nom et prénom" required>
+        <input type="tel" id="tel-m" name="tel" placeholder="Ex : 06 12 34 56 78" required>
+        <p class="field-hint">🔒 Un conseiller vous rappelle sous 2 minutes en heures ouvrées. Vos données restent confidentielles.</p>
+        <div class="step-actions">
+          <button type="button" class="btn btn-ghost" data-prev>Retour</button>
+          <button type="submit" class="btn btn-primary">Voir mon offre</button>
+        </div>
+      </div>
+
+      <div class="form-step form-loading" data-step="loading">
+        <div class="loading-spinner" aria-hidden="true"></div>
+        <h3 class="loading-text">Vérification de votre éligibilité…</h3>
+        <p class="field-hint">Merci de patienter quelques secondes.</p>
+      </div>
+
+      <div class="form-step form-success" data-step="success">
+        <div class="success-icon">🎉</div>
+        <h3>Demande bien reçue !</h3>
+        <p>Un conseiller vous rappelle très prochainement pour confirmer votre éligibilité aux 200€ et planifier votre intervention.</p>
+        <dl class="recap-list">
+          <div><dt>Code postal</dt><dd data-recap="cp">—</dd></div>
+          <div><dt>Vitrage</dt><dd data-recap="vitrage">—</dd></div>
+          <div><dt>Assurance</dt><dd data-recap="assurance">—</dd></div>
+        </dl>
+        <p class="field-hint">Une urgence ? Appelez directement le <a href="tel:0757634251">07 57 63 42 51</a>.</p>
+      </div>
+
+    </form>
+  </div>
+</div>

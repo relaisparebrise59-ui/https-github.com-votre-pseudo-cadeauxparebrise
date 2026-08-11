@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="badgeGrad" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#2fd08a"/>
+      <stop offset="55%" stop-color="#17a56b"/>
+      <stop offset="100%" stop-color="#0d7d50"/>
+    </radialGradient>
+    <filter id="badgeShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0d7d50" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <polygon
+    points="100.00,2.00 113.14,17.03 130.28,6.80 138.14,25.16 157.60,20.72 159.40,40.60 179.28,42.40 174.84,61.86 193.20,69.72 182.97,86.86 198.00,100.00 182.97,113.14 193.20,130.28 174.84,138.14 179.28,157.60 159.40,159.40 157.60,179.28 138.14,174.84 130.28,193.20 113.14,182.97 100.00,198.00 86.86,182.97 69.72,193.20 61.86,174.84 42.40,179.28 40.60,159.40 20.72,157.60 25.16,138.14 6.80,130.28 17.03,113.14 2.00,100.00 17.03,86.86 6.80,69.72 25.16,61.86 20.72,42.40 40.60,40.60 42.40,20.72 61.86,25.16 69.72,6.80 86.86,17.03"
+    fill="url(#badgeGrad)"
+    filter="url(#badgeShadow)"/>
+
+  <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-dasharray="3 6"/>
+
+  <text x="100" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" fill="#eafaf1" letter-spacing="1.5">JUSQU'À</text>
+  <text x="100" y="122" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="900" fill="#ffffff">200€</text>
+  <text x="100" y="146" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" fill="#eafaf1" letter-spacing="1.5">OFFERTS</text>
+</svg>
