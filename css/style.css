@@ -522,6 +522,13 @@ select {
   font-size: 15px;
 }
 
+.hero-reassurance {
+  margin: 14px 0 0;
+  color: rgba(255,255,255,.62);
+  font-size: 13px;
+  font-weight: 650;
+}
+
 /* FORM CARD */
 .form-card {
   position: relative;
@@ -1353,6 +1360,54 @@ select {
 
 body.tunnel-lock {
   overflow: hidden;
+}
+
+/* MOBILE STICKY CTA BAR */
+.mobile-sticky-cta {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  body {
+    padding-bottom: 78px;
+  }
+
+  .mobile-sticky-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 250;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: white;
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -8px 24px rgba(8, 27, 52, .14);
+  }
+
+  .mobile-sticky-call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: var(--page);
+    border: 1px solid var(--border);
+    font-size: 21px;
+  }
+
+  .mobile-sticky-btn {
+    flex: 1;
+    min-height: 50px;
+  }
+
+  body.tunnel-lock .mobile-sticky-cta {
+    display: none;
+  }
 }
 
 /* PHOTOS TERRAIN */

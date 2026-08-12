@@ -234,5 +234,29 @@
         closeTunnel();
       }
     });
+
+    /* Exit-intent: on desktop, if a visitor never opened the tunnel and moves the
+       cursor to leave the viewport upward (toward the tab bar), offer it once per
+       session instead of letting them leave without ever seeing the form. */
+    var hasOpenedTunnel = false;
+    document.addEventListener("click", function (e) {
+      if (e.target.closest("[data-open-tunnel]")) hasOpenedTunnel = true;
+    });
+
+    var exitIntentEligible = window.matchMedia("(min-width: 900px)").matches;
+    try {
+      if (sessionStorage.getItem("cpb_exit_intent_shown") === "1") exitIntentEligible = false;
+    } catch (err) {}
+
+    if (exitIntentEligible) {
+      document.addEventListener("mouseout", function (e) {
+        if (!exitIntentEligible || hasOpenedTunnel) return;
+        if (e.clientY > 0 || e.relatedTarget) return;
+        exitIntentEligible = false;
+        try { sessionStorage.setItem("cpb_exit_intent_shown", "1"); } catch (err) {}
+        openTunnel();
+        track("exit_intent_shown", {});
+      });
+    }
   }
 })();
