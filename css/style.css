@@ -1174,18 +1174,24 @@ select {
 }
 
 .why-figure {
+  position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  height: 240px;
+  height: 340px;
+  overflow: hidden;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, var(--brand-soft), #ffffff);
+  background:
+    radial-gradient(circle at 50% 20%, rgba(23,165,107,.18), transparent 60%),
+    linear-gradient(135deg, var(--brand-soft), #ffffff);
   border: 1px solid var(--border);
 }
 
-.why-emoji {
-  font-size: 96px;
-  filter: drop-shadow(0 12px 20px rgba(23,165,107,.25));
+.why-figure img {
+  height: 105%;
+  width: auto;
+  max-width: none;
+  filter: drop-shadow(0 14px 18px rgba(13,125,80,.22));
 }
 
 /* AVIS */
@@ -1640,6 +1646,19 @@ body.tunnel-lock {
     0 0 0 140px rgba(255,255,255,.012);
 }
 
+@media (min-width: 860px) {
+  .cta-final {
+    background-image:
+      linear-gradient(100deg, rgba(7,25,47,.98) 32%, rgba(7,25,47,.45) 58%, rgba(7,25,47,.05) 78%),
+      url('/images/mascotte-bienvenue.png'),
+      radial-gradient(circle at 84% 35%, rgba(23,165,107,.30), transparent 25%),
+      linear-gradient(135deg, #07192f 0%, #0b2e55 100%);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: center, bottom 0 right 4%, center, center;
+    background-size: cover, auto 112%, cover, cover;
+  }
+}
+
 .cta-final-inner {
   position: relative;
   z-index: 2;
@@ -2015,12 +2034,8 @@ body.tunnel-lock {
   }
 
   .why-figure {
-    height: 160px;
+    height: 220px;
     order: -1;
-  }
-
-  .why-emoji {
-    font-size: 64px;
   }
 
   .photo-card img {
