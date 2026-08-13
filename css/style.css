@@ -367,27 +367,26 @@ select {
 
 @media (min-width: 860px) {
   .hero-form-grid {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 40px;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: end;
+    gap: 20px;
   }
 
   .hero-form-grid .hero-person {
     order: 1;
-    max-width: 340px;
-    justify-self: center;
+    max-width: 280px;
   }
 
   .hero-form-grid .form-card {
     order: 2;
-    justify-self: end;
     margin: 0;
   }
 }
 
 @media (min-width: 1400px) {
   .hero-form-grid .hero-person {
-    max-width: 390px;
+    max-width: 320px;
   }
 }
 
