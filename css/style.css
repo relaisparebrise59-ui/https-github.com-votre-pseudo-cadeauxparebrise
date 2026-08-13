@@ -793,6 +793,13 @@ select {
   font-size: 31px;
 }
 
+.success-mascot {
+  width: auto;
+  height: 130px;
+  margin: 0 auto 10px;
+  filter: drop-shadow(0 10px 16px rgba(8, 27, 52, .18));
+}
+
 .form-success h3 {
   margin-bottom: 8px;
   color: var(--navy);
@@ -867,6 +874,28 @@ select {
 .page-hero .hero-cta-row {
   justify-content: center;
   margin-top: 8px;
+}
+
+.page-hero-mascot {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 28px auto 0;
+  height: 230px;
+  width: auto;
+  filter: drop-shadow(0 20px 26px rgba(0,0,0,.35));
+}
+
+.page-hero-mascot-wide {
+  height: auto;
+  width: 100%;
+  max-width: 460px;
+}
+
+@media (max-width: 600px) {
+  .page-hero-mascot {
+    height: 170px;
+  }
 }
 
 /* TRUST BAR */
