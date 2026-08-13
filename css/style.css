@@ -308,8 +308,9 @@ select {
   padding: 34px 0 38px;
   color: white;
   background:
-    radial-gradient(circle at 82% 18%, rgba(23, 165, 107, .22), transparent 27%),
-    radial-gradient(circle at 12% 15%, rgba(62, 107, 255, .18), transparent 25%),
+    radial-gradient(circle at 85% 12%, rgba(47, 208, 138, .38), transparent 32%),
+    radial-gradient(circle at 78% 55%, rgba(23, 165, 107, .22), transparent 30%),
+    radial-gradient(circle at 8% 10%, rgba(62, 107, 255, .22), transparent 28%),
     linear-gradient(135deg, #07192f 0%, #0a2548 52%, #07192f 100%);
 }
 
@@ -504,21 +505,46 @@ select {
 }
 
 .hero-points {
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 0;
 }
 
 .hero-points li {
-  padding: 10px 13px;
-  border: 1px solid rgba(255,255,255,.11);
-  border-radius: 12px;
-  background: rgba(255,255,255,.07);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 16px 8px 8px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
   color: white;
-  font-size: 13px;
-  font-weight: 750;
+  font-size: 13.5px;
+  font-weight: 800;
   backdrop-filter: blur(10px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
+}
+
+.hero-points li span.pt-icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2fd08a, #0d7d50);
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(23,165,107,.4);
+}
+
+.hero-h1-coin {
+  display: inline-block;
+  height: .78em;
+  width: auto;
+  vertical-align: -.12em;
+  margin-left: 10px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,.35));
 }
 
 .hero-cta-row {
@@ -564,21 +590,47 @@ select {
 }
 
 .form-card::before {
-  content: "";
-  position: absolute;
-  inset: -1px -1px auto;
-  height: 6px;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-  background: linear-gradient(90deg, var(--brand), #67d8ad);
+  display: none;
 }
 
 .form-card-header {
-  margin-bottom: 17px;
+  position: relative;
+  margin: -30px -30px 22px;
+  padding: 24px 28px 28px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(255,255,255,.16), transparent 55%),
+    linear-gradient(135deg, #22c485 0%, #17a56b 45%, #0a5c3c 100%);
+  overflow: hidden;
+}
+
+.form-card-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 13px;
+  margin-bottom: 13px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.16);
+  border: 1px solid rgba(255,255,255,.32);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.form-card-pill .pt-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #baffde;
+  box-shadow: 0 0 0 4px rgba(186,255,222,.28);
 }
 
 .form-card-header h2 {
   margin-bottom: 7px;
-  color: var(--navy);
+  color: white;
   font-size: 24px;
   font-weight: 900;
   letter-spacing: -.03em;
@@ -586,9 +638,32 @@ select {
 
 .form-card-header p {
   margin-bottom: 18px;
-  color: var(--muted);
+  color: rgba(255,255,255,.82);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 650;
+}
+
+.form-card-header .progress-track {
+  margin-bottom: 0;
+}
+
+.form-card-header .progress-step {
+  background: rgba(255,255,255,.22);
+}
+
+.form-card-header .progress-step.active,
+.form-card-header .progress-step.done {
+  background: white;
+}
+
+.form-trust-row {
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+  font-size: 11.5px;
+  font-weight: 700;
 }
 
 .progress-track {
