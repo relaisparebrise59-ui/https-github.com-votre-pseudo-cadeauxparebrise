@@ -165,19 +165,23 @@ select {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, .98);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 16px rgba(7, 27, 52, .09);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  padding: 12px 0;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(255,255,255,.14), transparent 55%),
+    linear-gradient(110deg, #22c485 0%, #17a56b 45%, #0a5c3c 100%);
+  box-shadow: 0 4px 18px rgba(6, 30, 20, .22);
 }
 
-.header-inner {
-  height: 78px;
+.header-pill {
+  height: 66px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
+  padding: 0 10px 0 20px;
+  background: white;
+  border-radius: 999px;
+  box-shadow: 0 14px 30px rgba(4, 20, 10, .22);
 }
 
 .logo {
@@ -215,32 +219,19 @@ select {
   flex: 1;
 }
 
-.main-nav a {
+.main-nav a:not(.btn) {
   position: relative;
+  padding: 9px 15px;
+  border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
-  color: #526074;
-  transition: color .18s ease;
+  color: #465467;
+  transition: color .18s ease, background .18s ease;
 }
 
-.main-nav a:not(.btn)::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 100%;
-  bottom: -7px;
-  height: 2px;
-  border-radius: 10px;
-  background: var(--brand);
-  transition: right .18s ease;
-}
-
-.main-nav a:hover {
+.main-nav a:not(.btn):hover {
   color: var(--navy);
-}
-
-.main-nav a:hover::after {
-  right: 0;
+  background: var(--page);
 }
 
 .main-nav .nav-cta {
@@ -1906,7 +1897,7 @@ body.tunnel-lock {
 
   .main-nav.open {
     position: absolute;
-    top: 78px;
+    top: 90px;
     left: 0;
     right: 0;
     display: flex;
@@ -2007,8 +1998,13 @@ body.tunnel-lock {
     width: min(100% - 28px, var(--container-w));
   }
 
-  .header-inner {
-    height: 68px;
+  .site-header {
+    padding: 8px 0;
+  }
+
+  .header-pill {
+    height: 56px;
+    padding: 0 8px 0 16px;
   }
 
   .header-actions {
@@ -2033,7 +2029,7 @@ body.tunnel-lock {
   }
 
   .main-nav.open {
-    top: 68px;
+    top: 72px;
   }
 
   .zone-banner {
