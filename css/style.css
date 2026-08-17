@@ -192,13 +192,14 @@ select {
 }
 
 .logo-img {
-  height: 48px;
+  height: 54px;
   width: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.35));
 }
 
 .footer-logo-img {
-  height: 44px;
-  filter: drop-shadow(0 0 1px rgba(255,255,255,.9)) drop-shadow(0 0 8px rgba(255,255,255,.4));
+  height: 52px;
+  filter: none;
 }
 
 .logo-text {
