@@ -8,6 +8,7 @@ paths (/css, /js, /images) so the site works from any nesting level.
 
 Run: python build/generate.py
 """
+import hashlib
 import json
 import re
 from datetime import date
@@ -24,6 +25,13 @@ SITE_NAME = "Cadeaux Pare-Brise"
 PHONE = "07 57 63 42 51"
 SITE_URL = "https://cadeauxparebrise.fr"
 BUILD_DATE = date.today().isoformat()
+
+# Cache-busting token derived from the actual CSS+JS content: changes only
+# when a real edit happens, so browsers (and the user re-checking the site)
+# always pick up the latest styles/scripts instead of serving a stale cache.
+ASSET_VERSION = hashlib.md5(
+    (ROOT / "css" / "style.css").read_bytes() + (ROOT / "js" / "main.js").read_bytes()
+).hexdigest()[:10]
 
 # Collected as pages are rendered, then used to emit sitemap.xml at the end.
 SITEMAP_ENTRIES = []
@@ -53,6 +61,7 @@ def render(output_path, title, description, body, extra_head="", priority="0.7")
     html = html.replace("{{TITLE}}", title)
     html = html.replace("{{DESCRIPTION}}", description)
     html = html.replace("{{PATH}}", canonical_path)
+    html = html.replace("{{ASSET_VERSION}}", ASSET_VERSION)
     html = html.replace("{{EXTRA_HEAD}}", extra_head)
     html = html.replace("{{TRACKING}}", TRACKING)
     html = html.replace("{{HEADER}}", HEADER)
