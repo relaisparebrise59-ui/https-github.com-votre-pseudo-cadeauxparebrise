@@ -170,7 +170,7 @@ select {
 }
 
 .header-pill {
-  height: 66px;
+  height: 84px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -192,13 +192,13 @@ select {
 }
 
 .logo-img {
-  height: 54px;
+  height: 76px;
   width: auto;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,.35));
 }
 
 .footer-logo-img {
-  height: 52px;
+  height: 76px;
   filter: none;
 }
 
