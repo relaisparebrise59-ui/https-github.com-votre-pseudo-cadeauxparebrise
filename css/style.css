@@ -166,11 +166,7 @@ select {
   top: 0;
   z-index: 100;
   padding: 12px 0;
-  background: rgba(255, 255, 255, .98);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, .08);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: none;
 }
 
 .header-pill {
@@ -180,27 +176,32 @@ select {
   justify-content: space-between;
   gap: 20px;
   padding: 0 10px 0 20px;
-  background: white;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(255,255,255,.18), transparent 55%),
+    linear-gradient(100deg, #ffd43b 0%, #ff8a1f 30%, #f5291d 62%, #b3140a 100%);
   border-radius: 999px;
-  border: 1px solid var(--border);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .28);
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 9px;
-  color: var(--navy);
+  color: white;
   flex-shrink: 0;
 }
 
-.logo-icon {
-  width: 37px;
-  height: 37px;
-  display: grid;
-  place-items: center;
-  border-radius: 11px;
-  background: var(--brand-soft);
-  font-size: 20px;
+.logo-img {
+  height: 40px;
+  width: auto;
+  background: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.footer-logo-img {
+  height: 44px;
 }
 
 .logo-text {
@@ -226,13 +227,13 @@ select {
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
-  color: #465467;
+  color: rgba(255,255,255,.9);
   transition: color .18s ease, background .18s ease;
 }
 
 .main-nav a:not(.btn):hover {
-  color: var(--navy);
-  background: var(--page);
+  color: white;
+  background: rgba(255,255,255,.2);
 }
 
 .main-nav .nav-cta {
@@ -251,10 +252,20 @@ select {
   gap: 7px;
   padding: 10px 12px;
   border-radius: 11px;
-  color: var(--navy);
+  color: white;
   font-weight: 800;
   font-size: 14px;
-  background: #f4f7fa;
+  background: rgba(255,255,255,.2);
+}
+
+.header-pill .btn-primary {
+  color: #b3140a;
+  background: white;
+  box-shadow: 0 8px 18px rgba(0,0,0,.2);
+}
+
+.header-pill .btn-primary:hover {
+  box-shadow: 0 10px 22px rgba(0,0,0,.28);
 }
 
 .phone-icon {
@@ -268,9 +279,9 @@ select {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255,255,255,.35);
   border-radius: 12px;
-  background: white;
+  background: rgba(255,255,255,.2);
   cursor: pointer;
 }
 
@@ -278,7 +289,7 @@ select {
   width: 19px;
   height: 2px;
   margin: 0 auto;
-  background: var(--navy);
+  background: white;
   border-radius: 2px;
 }
 
