@@ -192,16 +192,13 @@ select {
 }
 
 .logo-img {
-  height: 40px;
+  height: 48px;
   width: auto;
-  background: white;
-  padding: 6px 12px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,.15);
 }
 
 .footer-logo-img {
   height: 44px;
+  filter: drop-shadow(0 0 1px rgba(255,255,255,.9)) drop-shadow(0 0 8px rgba(255,255,255,.4));
 }
 
 .logo-text {
