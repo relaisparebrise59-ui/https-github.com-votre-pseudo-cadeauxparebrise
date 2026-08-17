@@ -343,6 +343,23 @@ select {
   max-width: 900px;
 }
 
+@media (min-width: 1160px) {
+  .hero > .container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .hero-copy-top {
+    max-width: 560px;
+  }
+
+  .hero-form-grid {
+    margin-top: 0;
+  }
+}
+
 .hero-form-grid {
   position: relative;
   z-index: 2;
