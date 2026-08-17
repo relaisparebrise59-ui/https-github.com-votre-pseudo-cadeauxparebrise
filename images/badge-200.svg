@@ -1,12 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <defs>
-    <radialGradient id="badgeGrad" cx="35%" cy="30%" r="75%">
-      <stop offset="0%" stop-color="#ef2d43"/>
-      <stop offset="55%" stop-color="#e0112b"/>
-      <stop offset="100%" stop-color="#a10e21"/>
-    </radialGradient>
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd43b"/>
+      <stop offset="35%" stop-color="#ff8a1f"/>
+      <stop offset="70%" stop-color="#f5291d"/>
+      <stop offset="100%" stop-color="#b3140a"/>
+    </linearGradient>
     <filter id="badgeShadow" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#a10e21" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#7a0f08" flood-opacity="0.5"/>
     </filter>
   </defs>
 
@@ -15,9 +16,9 @@
     fill="url(#badgeGrad)"
     filter="url(#badgeShadow)"/>
 
-  <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-dasharray="3 6"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-dasharray="3 6"/>
 
-  <text x="100" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" fill="#ffe4e7" letter-spacing="1.5">JUSQU'À</text>
+  <text x="100" y="72" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" fill="#fff3d6" letter-spacing="1.5">JUSQU'À</text>
   <text x="100" y="122" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="900" fill="#ffffff">200€</text>
-  <text x="100" y="146" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" fill="#ffe4e7" letter-spacing="1.5">OFFERTS</text>
+  <text x="100" y="146" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" fill="#fff3d6" letter-spacing="1.5">OFFERTS</text>
 </svg>

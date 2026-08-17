@@ -1,8 +1,8 @@
 
 :root {
-  --brand: #e0112b;
-  --brand-dark: #a10e21;
-  --brand-soft: #fce8ea;
+  --brand: #f5291d;
+  --brand-dark: #b3140a;
+  --brand-soft: #ffe6dc;
 
   --navy: #0d0d0f;
   --navy-2: #17171a;
@@ -130,12 +130,12 @@ select {
 
 .btn-primary {
   color: white;
-  background: linear-gradient(135deg, #ef2d43 0%, var(--brand-dark) 100%);
-  box-shadow: 0 12px 26px rgba(224, 17, 43, .27);
+  background: linear-gradient(135deg, #ff5a3d 0%, var(--brand-dark) 100%);
+  box-shadow: 0 12px 26px rgba(245, 41, 29, .27);
 }
 
 .btn-primary:hover {
-  box-shadow: 0 16px 34px rgba(224, 17, 43, .35);
+  box-shadow: 0 16px 34px rgba(245, 41, 29, .35);
 }
 
 .btn-white {
@@ -167,8 +167,8 @@ select {
   z-index: 100;
   padding: 12px 0;
   background:
-    radial-gradient(circle at 15% 0%, rgba(255,255,255,.14), transparent 55%),
-    linear-gradient(110deg, #ef2d43 0%, #e0112b 45%, #7a0a18 100%);
+    radial-gradient(circle at 15% 0%, rgba(255,255,255,.16), transparent 55%),
+    linear-gradient(100deg, #ffd43b 0%, #ff8a1f 30%, #f5291d 62%, #b3140a 100%);
   box-shadow: 0 4px 18px rgba(0, 0, 0, .22);
 }
 
@@ -299,9 +299,9 @@ select {
   padding: 34px 0 38px;
   color: white;
   background:
-    radial-gradient(circle at 85% 12%, rgba(239, 45, 67, .38), transparent 32%),
-    radial-gradient(circle at 78% 55%, rgba(224, 17, 43, .22), transparent 30%),
-    radial-gradient(circle at 8% 10%, rgba(224, 17, 43, .22), transparent 28%),
+    radial-gradient(circle at 85% 12%, rgba(255,90,61, .38), transparent 32%),
+    radial-gradient(circle at 78% 55%, rgba(245, 41, 29, .22), transparent 30%),
+    radial-gradient(circle at 8% 10%, rgba(245, 41, 29, .22), transparent 28%),
     linear-gradient(135deg, #0a0a0c 0%, #131315 52%, #0a0a0c 100%);
 }
 
@@ -475,8 +475,8 @@ select {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #ff4d5e;
-  box-shadow: 0 0 0 5px rgba(255, 77, 94, .12);
+  background: #ff4a2e;
+  box-shadow: 0 0 0 5px rgba(255,74,46, .12);
 }
 
 .hero h1 {
@@ -492,8 +492,8 @@ select {
 .hero h1 .highlight {
   display: inline-block;
   margin: 8px 0;
-  color: #ff4d5e;
-  text-shadow: 0 8px 35px rgba(224,17,43,.16);
+  color: #ff4a2e;
+  text-shadow: 0 8px 35px rgba(245,41,29,.16);
 }
 
 .hero-sub {
@@ -541,9 +541,9 @@ select {
   height: 28px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: linear-gradient(135deg, #ef2d43, #a10e21);
+  background: linear-gradient(135deg, #ff5a3d, #b3140a);
   font-size: 14px;
-  box-shadow: 0 4px 10px rgba(224,17,43,.4);
+  box-shadow: 0 4px 10px rgba(245,41,29,.4);
 }
 
 .hero-h1-coin {
@@ -608,7 +608,7 @@ select {
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   background:
     radial-gradient(circle at 15% 0%, rgba(255,255,255,.16), transparent 55%),
-    linear-gradient(135deg, #ef2d43 0%, #e0112b 45%, #7a0a18 100%);
+    linear-gradient(135deg, #ff5a3d 0%, #f5291d 45%, #7a0f08 100%);
   overflow: hidden;
 }
 
@@ -632,8 +632,8 @@ select {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #ffc1c9;
-  box-shadow: 0 0 0 4px rgba(255,193,201,.28);
+  background: #ffb8a8;
+  box-shadow: 0 0 0 4px rgba(255,190,168,.28);
 }
 
 .form-card-header h2 {
@@ -690,7 +690,7 @@ select {
 
 .progress-step.active,
 .progress-step.done {
-  background: linear-gradient(90deg, var(--brand), #ff5468);
+  background: linear-gradient(90deg, var(--brand), #ff5a2e);
 }
 
 .form-step {
@@ -747,7 +747,7 @@ select {
 .form-step select:focus {
   border-color: var(--brand);
   background: white;
-  box-shadow: 0 0 0 4px rgba(224,17,43,.11);
+  box-shadow: 0 0 0 4px rgba(245,41,29,.11);
 }
 
 .field-hint {
@@ -787,15 +787,15 @@ select {
 
 .choice-btn:hover {
   transform: translateY(-1px);
-  border-color: #e8a8b0;
-  background: #fdf1f2;
+  border-color: #ffb89f;
+  background: #fff0ea;
 }
 
 .choice-btn.selected {
   border-color: var(--brand);
   background: var(--brand-soft);
-  color: #8c0c1a;
-  box-shadow: inset 0 0 0 1px rgba(224,17,43,.08);
+  color: #99180a;
+  box-shadow: inset 0 0 0 1px rgba(245,41,29,.08);
 }
 
 .step-actions {
@@ -1270,7 +1270,7 @@ select {
   overflow: hidden;
   border-radius: var(--radius-lg);
   background:
-    radial-gradient(circle at 50% 20%, rgba(224,17,43,.18), transparent 60%),
+    radial-gradient(circle at 50% 20%, rgba(245,41,29,.18), transparent 60%),
     linear-gradient(135deg, var(--brand-soft), #ffffff);
   border: 1px solid var(--border);
 }
@@ -1279,7 +1279,7 @@ select {
   height: 105%;
   width: auto;
   max-width: none;
-  filter: drop-shadow(0 14px 18px rgba(161,14,33,.22));
+  filter: drop-shadow(0 14px 18px rgba(179,20,10,.22));
 }
 
 /* AVIS */
@@ -1716,7 +1716,7 @@ body.tunnel-lock {
   overflow: hidden;
   padding: 72px 0;
   background:
-    radial-gradient(circle at 84% 35%, rgba(224,17,43,.30), transparent 25%),
+    radial-gradient(circle at 84% 35%, rgba(245,41,29,.30), transparent 25%),
     linear-gradient(135deg, #0a0a0c 0%, #1a1a1d 100%);
 }
 
@@ -1739,7 +1739,7 @@ body.tunnel-lock {
     background-image:
       linear-gradient(100deg, rgba(0,0,0,.98) 32%, rgba(0,0,0,.45) 58%, rgba(0,0,0,.05) 78%),
       url('/images/mascotte-bienvenue.png'),
-      radial-gradient(circle at 84% 35%, rgba(224,17,43,.30), transparent 25%),
+      radial-gradient(circle at 84% 35%, rgba(245,41,29,.30), transparent 25%),
       linear-gradient(135deg, #0a0a0c 0%, #1a1a1d 100%);
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-position: center, bottom 0 right 4%, center, center;
@@ -1763,7 +1763,7 @@ body.tunnel-lock {
   border: 1px solid rgba(255,255,255,.12);
   border-radius: 999px;
   background: rgba(255,255,255,.08);
-  color: #ff8a95;
+  color: #ff8a5c;
   font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;

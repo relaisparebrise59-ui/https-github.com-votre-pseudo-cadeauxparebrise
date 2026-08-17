@@ -5,12 +5,12 @@
       <stop offset="100%" stop-color="#0d0d0f"/>
     </linearGradient>
     <linearGradient id="noteMid" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ef2d43"/>
-      <stop offset="100%" stop-color="#a10e21"/>
+      <stop offset="0%" stop-color="#ff8a1f"/>
+      <stop offset="100%" stop-color="#b3140a"/>
     </linearGradient>
     <linearGradient id="noteFront" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f4485d"/>
-      <stop offset="100%" stop-color="#e0112b"/>
+      <stop offset="0%" stop-color="#ffd43b"/>
+      <stop offset="100%" stop-color="#f5291d"/>
     </linearGradient>
     <filter id="noteShadow" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#000000" flood-opacity="0.35"/>
