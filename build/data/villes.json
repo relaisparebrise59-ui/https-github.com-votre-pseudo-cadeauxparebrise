@@ -7,7 +7,7 @@
     "environs": "Lomme, Lambersart, Marcq-en-Barœul, Mons-en-Barœul et Hellemmes",
     "quartiers": "Vieux-Lille, Wazemmes, Vauban-Esquermes, Fives, Bois-Blancs et Moulins",
     "intro": "Métropole la plus dense du Nord, Lille et ses quartiers concentrent une grande partie de nos interventions quotidiennes.",
-    "photo": "technicien-verif.png"
+    "photo": "technicien-verif.jpg"
   },
   {
     "slug": "pare-brise-lomme",
@@ -17,7 +17,7 @@
     "environs": "Lille, Loos, Sequedin et Capinghem",
     "quartiers": null,
     "intro": "Commune associée à Lille, Lomme bénéficie des mêmes délais d'intervention que le reste de la métropole.",
-    "photo": "technicien-pose.png"
+    "photo": "technicien-pose.jpg"
   },
   {
     "slug": "pare-brise-roubaix",
@@ -27,7 +27,7 @@
     "environs": "Wattrelos, Croix, Wasquehal et Hem",
     "quartiers": "Centre, Épeule, Pile, Fresnoy-Mackellerie, Trois-Ponts et Alma",
     "intro": "À quelques minutes de Lille, Roubaix et son agglomération font partie de nos zones d'intervention les plus régulières.",
-    "photo": "technicien-pose.png"
+    "photo": "technicien-pose.jpg"
   },
   {
     "slug": "pare-brise-tourcoing",
@@ -37,7 +37,7 @@
     "environs": "Neuville-en-Ferrain, Bondues et Mouvaux",
     "quartiers": "Centre, Croix-Rouge, Blanc-Seau et Bourgogne",
     "intro": "Proche de la frontière belge, Tourcoing bénéficie du même délai d'intervention que le reste de la métropole lilloise.",
-    "photo": "technicien-verif.png"
+    "photo": "technicien-verif.jpg"
   },
   {
     "slug": "pare-brise-villeneuve-dascq",
@@ -47,7 +47,7 @@
     "environs": "Sainghin-en-Mélantois, Anstaing et Chéreng",
     "quartiers": "Ascq, Annappes et Flers",
     "intro": "Ville universitaire et résidentielle, Villeneuve-d'Ascq compte de nombreux parkings d'entreprise où nous intervenons directement sur le lieu de travail.",
-    "photo": "technicien-pose.png"
+    "photo": "technicien-pose.jpg"
   },
   {
     "slug": "pare-brise-douai",
@@ -57,7 +57,7 @@
     "environs": "Sin-le-Noble, Waziers et Cuincy",
     "quartiers": null,
     "intro": "Douai et son agglomération sont couvertes au même titre que la métropole lilloise, avec les mêmes délais d'intervention.",
-    "photo": "technicien-verif.png"
+    "photo": "technicien-verif.jpg"
   },
   {
     "slug": "pare-brise-valenciennes",
@@ -67,7 +67,7 @@
     "environs": "Anzin, Marly et Saint-Saulve",
     "quartiers": null,
     "intro": "À l'est du département, Valenciennes et ses environs font partie de notre zone de couverture régulière dans le Nord.",
-    "photo": "technicien-pose.png"
+    "photo": "technicien-pose.jpg"
   },
   {
     "slug": "pare-brise-lens",
@@ -77,7 +77,7 @@
     "environs": "Liévin, Loos-en-Gohelle et Avion",
     "quartiers": "Centre, Grande-Résidence et quartier Mitterrand",
     "intro": "Lens et son bassin minier comptent parmi les secteurs les plus demandés du Pas-de-Calais.",
-    "photo": "technicien-verif.png"
+    "photo": "technicien-verif.jpg"
   },
   {
     "slug": "pare-brise-lievin",
@@ -87,7 +87,7 @@
     "environs": "Lens, Angres et Loos-en-Gohelle",
     "quartiers": null,
     "intro": "Voisine directe de Lens, Liévin bénéficie des mêmes délais d'intervention rapides.",
-    "photo": "technicien-pose.png"
+    "photo": "technicien-pose.jpg"
   },
   {
     "slug": "pare-brise-henin-beaumont",
@@ -97,7 +97,7 @@
     "environs": "Courrières, Noyelles-Godault et Dourges",
     "quartiers": null,
     "intro": "Hénin-Beaumont et sa zone d'activité font partie de notre secteur d'intervention régulier dans le Pas-de-Calais.",
-    "photo": "technicien-verif.png"
+    "photo": "technicien-verif.jpg"
   },
   {
     "slug": "pare-brise-arras",
@@ -107,7 +107,7 @@
     "environs": "Saint-Nicolas, Beaurains et Achicourt",
     "quartiers": "Centre historique, Saint-Sauveur et Blangy",
     "intro": "Préfecture du Pas-de-Calais, Arras et son agglomération sont couvertes avec les mêmes garanties que le reste du département.",
-    "photo": "technicien-pose.png"
+    "photo": "technicien-pose.jpg"
   },
   {
     "slug": "pare-brise-bethune",
@@ -117,7 +117,7 @@
     "environs": "Beuvry, Annezin et Verquin",
     "quartiers": null,
     "intro": "Béthune et son bassin d'emploi font partie de nos secteurs d'intervention réguliers dans le Pas-de-Calais.",
-    "photo": "technicien-verif.png"
+    "photo": "technicien-verif.jpg"
   },
   {
     "slug": "pare-brise-calais",
@@ -127,6 +127,6 @@
     "environs": "Coquelles, Marck et Sangatte",
     "quartiers": null,
     "intro": "Ville portuaire du littoral, Calais et ses environs sont couverts au même titre que le reste du Pas-de-Calais.",
-    "photo": "technicien-pose.png"
+    "photo": "technicien-pose.jpg"
   }
 ]

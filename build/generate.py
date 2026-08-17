@@ -53,9 +53,66 @@ TRACKING = read(PARTIALS / "tracking.html")
 MODAL = read(PARTIALS / "tunnel-modal.html")
 SHELL = read(TEMPLATES / "shell.html")
 
+TAG_RE = re.compile(r"<[^>]+>")
+
+
+def strip_tags(html_fragment):
+    return re.sub(TAG_RE, "", html_fragment).strip()
+
+
+def faq_jsonld(body_html):
+    """Extract every FAQ item actually visible on the page and turn it into
+    FAQPage structured data, so the markup always matches what a visitor
+    (and Google) can read — no separate list to keep in sync by hand."""
+    items = re.findall(
+        r"<summary>(.*?)</summary>\s*<div class=\"faq-answer\">(.*?)</div>",
+        body_html,
+        re.DOTALL,
+    )
+    if not items:
+        return ""
+    entities = [
+        {
+            "@type": "Question",
+            "name": strip_tags(q),
+            "acceptedAnswer": {"@type": "Answer", "text": strip_tags(a)},
+        }
+        for q, a in items
+    ]
+    schema = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": entities}
+    return f'<script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>\n'
+
+
+def breadcrumb_jsonld(body_html):
+    """Same idea for the breadcrumb line at the top of every non-home page."""
+    m = re.search(r'<p class="breadcrumb">(.*?)</p>', body_html, re.DOTALL)
+    if not m:
+        return ""
+    crumb_html = m.group(1)
+    links = re.findall(r'<a href="([^"]+)">([^<]+)</a>', crumb_html)
+    tail = strip_tags(crumb_html.rsplit("</a>", 1)[-1]).lstrip("/").strip()
+
+    items = []
+    for position, (href, label) in enumerate(links, start=1):
+        items.append(
+            {
+                "@type": "ListItem",
+                "position": position,
+                "name": strip_tags(label),
+                "item": SITE_URL + href,
+            }
+        )
+    if tail:
+        items.append({"@type": "ListItem", "position": len(items) + 1, "name": tail})
+    if not items:
+        return ""
+    schema = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items}
+    return f'<script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>\n'
+
 
 def render(output_path, title, description, body, extra_head="", priority="0.7"):
     canonical_path = "/" if output_path == "" else f"/{output_path}/"
+    extra_head = extra_head + breadcrumb_jsonld(body) + faq_jsonld(body)
 
     html = SHELL
     html = html.replace("{{TITLE}}", title)
@@ -283,7 +340,7 @@ def ville_body(v):
       </div>
       <div class="photo-grid" style="max-width:720px; margin:0 auto; grid-template-columns:1fr;">
         <figure class="photo-card">
-          <img src="/images/{v['photo']}" alt="Technicien Cadeaux Pare-Brise en intervention">
+          <img src="/images/{v['photo']}" width="1400" height="787" loading="lazy" alt="Technicien Cadeaux Pare-Brise en intervention">
           <figcaption>Remplacement à domicile avec équipement professionnel complet</figcaption>
         </figure>
       </div>
