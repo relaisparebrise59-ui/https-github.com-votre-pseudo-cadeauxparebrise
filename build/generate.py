@@ -22,7 +22,7 @@ CONTENT = BUILD / "content"
 DATA = BUILD / "data"
 
 SITE_NAME = "Cadeaux Pare-Brise"
-PHONE = "07 57 63 42 51"
+PHONE = "06 58 50 85 80"
 SITE_URL = "https://cadeauxparebrise.fr"
 BUILD_DATE = date.today().isoformat()
 
@@ -234,7 +234,7 @@ CORE_PAGES = [
         "path": "contact",
         "content": "contact.html",
         "title": "Contact | Cadeaux Pare-Brise",
-        "description": "Contactez Cadeaux Pare-Brise au 07 57 63 42 51 pour toute question sur votre remplacement de pare-brise dans le Nord Pas-de-Calais.",
+        "description": "Contactez Cadeaux Pare-Brise au 06 58 50 85 80 pour toute question sur votre remplacement de pare-brise dans le Nord Pas-de-Calais.",
         "priority": "0.5",
     },
     {
@@ -382,7 +382,7 @@ def ville_body(v):
         <p>Estimation gratuite en 30 secondes.</p>
       </div>
       <div class="cta-final-actions">
-        <a href="tel:0757634251" class="btn btn-white">📞 {PHONE}</a>
+        <a href="tel:0658508580" class="btn btn-white">📞 {PHONE}</a>
         <a href="#" class="btn btn-primary" data-open-tunnel>Vérifier mon éligibilité</a>
       </div>
     </div>
@@ -542,7 +542,7 @@ def assurance_body(a):
         <p>3 questions, 30 secondes.</p>
       </div>
       <div class="cta-final-actions">
-        <a href="tel:0757634251" class="btn btn-white">📞 {PHONE}</a>
+        <a href="tel:0658508580" class="btn btn-white">📞 {PHONE}</a>
         <a href="#" class="btn btn-primary" data-open-tunnel>Vérifier mon éligibilité</a>
       </div>
     </div>
