@@ -144,14 +144,14 @@ CORE_PAGES = [
         "path": "",
         "content": "home.html",
         "title": "Cadeaux Pare-Brise — Jusqu'à 200€ offerts, remplacement à domicile Nord Pas-de-Calais",
-        "description": "Remplacement de pare-brise à domicile dans le Nord Pas-de-Calais (59 & 62). Jusqu'à 200€ offerts par virement bancaire. Zéro avance de frais, toutes assurances, intervention sous 24-48h.",
+        "description": "Remplacement de pare-brise à domicile dans le Nord Pas-de-Calais (59 & 62). Jusqu'à 200€ offerts par virement instantané le jour du rendez-vous. Zéro avance de frais, toutes assurances, intervention sous 24-48h.",
         "priority": "1.0",
     },
     {
         "path": "offre-pare-brise",
         "content": "offre-pare-brise.html",
         "title": "Jusqu'à 200€ offerts pour votre pare-brise | Cadeaux Pare-Brise",
-        "description": "Découvrez l'offre Cadeaux Pare-Brise : jusqu'à 200€ versés par virement bancaire pour tout remplacement de pare-brise, en plus de votre prise en charge assurance.",
+        "description": "Découvrez l'offre Cadeaux Pare-Brise : jusqu'à 200€ versés par virement instantané le jour du rendez-vous, pour tout remplacement de pare-brise, en plus de votre prise en charge assurance.",
         "priority": "0.9",
     },
     {
@@ -318,7 +318,7 @@ def ville_body(v):
           <li>Délai moyen de 24 à 48h selon les disponibilités</li>
           <li>Zéro avance de frais, toutes assurances acceptées</li>
           <li>Calibrage ADAS inclus si votre véhicule en est équipé</li>
-          <li>Jusqu'à 200€ offerts par virement bancaire</li>
+          <li>Jusqu'à 200€ offerts par virement instantané le jour du RDV</li>
         </ul>
         <a href="#" class="btn btn-primary" data-open-tunnel>Vérifier mon éligibilité</a>
       </div>
