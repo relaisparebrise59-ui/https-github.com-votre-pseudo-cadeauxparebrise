@@ -23,7 +23,7 @@ DATA = BUILD / "data"
 
 SITE_NAME = "Cadeaux Pare-Brise"
 PHONE = "06 58 50 85 80"
-SITE_URL = "https://cadeauxparebrise.fr"
+SITE_URL = "https://www.cadeauxparebrise.fr"
 BUILD_DATE = date.today().isoformat()
 
 # Cache-busting token derived from the actual CSS+JS content: changes only
@@ -118,6 +118,7 @@ def render(output_path, title, description, body, extra_head="", priority="0.7")
     html = html.replace("{{TITLE}}", title)
     html = html.replace("{{DESCRIPTION}}", description)
     html = html.replace("{{PATH}}", canonical_path)
+    html = html.replace("{{SITE_URL}}", SITE_URL)
     html = html.replace("{{ASSET_VERSION}}", ASSET_VERSION)
     html = html.replace("{{EXTRA_HEAD}}", extra_head)
     html = html.replace("{{TRACKING}}", TRACKING)
