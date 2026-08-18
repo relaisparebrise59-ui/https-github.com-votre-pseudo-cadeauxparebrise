@@ -5,8 +5,11 @@
 # ------------------------------------------------------------------
 RewriteEngine On
 
-# Force HTTPS
+# Force HTTPS (verifie aussi X-Forwarded-Proto : IONOS et la plupart
+# des hebergeurs mutualises font terminer le SSL par un proxy en amont
+# d'Apache, donc %{HTTPS} seul peut rester "off" meme en HTTPS reel)
 RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Force www (redirige cadeauxparebrise.fr -> www.cadeauxparebrise.fr)
