@@ -235,25 +235,42 @@
       }
     });
 
-    /* Exit-intent: on desktop, if a visitor never opened the tunnel and moves the
-       cursor to leave the viewport upward (toward the tab bar), offer it once per
-       session instead of letting them leave without ever seeing the form. */
     var hasOpenedTunnel = false;
     document.addEventListener("click", function (e) {
       if (e.target.closest("[data-open-tunnel]")) hasOpenedTunnel = true;
     });
 
-    var exitIntentEligible = window.matchMedia("(min-width: 900px)").matches;
+    /* Auto-popup: only ever shown once per session, either by the 30s timer
+       below or by exit-intent — whichever happens first. */
+    var autoModalShown = false;
     try {
-      if (sessionStorage.getItem("cpb_exit_intent_shown") === "1") exitIntentEligible = false;
+      if (sessionStorage.getItem("cpb_auto_modal_shown") === "1") autoModalShown = true;
     } catch (err) {}
+    var markAutoModalShown = function () {
+      autoModalShown = true;
+      try { sessionStorage.setItem("cpb_auto_modal_shown", "1"); } catch (err) {}
+    };
+
+    /* Timed popup: if the visitor is still on the site after 30s and hasn't
+       opened the tunnel yet, surface the form for them automatically. */
+    window.setTimeout(function () {
+      if (autoModalShown || hasOpenedTunnel || tunnelModal.classList.contains("open")) return;
+      markAutoModalShown();
+      openTunnel();
+      track("timed_modal_shown", {});
+    }, 30000);
+
+    /* Exit-intent: on desktop, if a visitor never opened the tunnel and moves the
+       cursor to leave the viewport upward (toward the tab bar), offer it once per
+       session instead of letting them leave without ever seeing the form. */
+    var exitIntentEligible = window.matchMedia("(min-width: 900px)").matches && !autoModalShown;
 
     if (exitIntentEligible) {
       document.addEventListener("mouseout", function (e) {
-        if (!exitIntentEligible || hasOpenedTunnel) return;
+        if (!exitIntentEligible || hasOpenedTunnel || autoModalShown) return;
         if (e.clientY > 0 || e.relatedTarget) return;
         exitIntentEligible = false;
-        try { sessionStorage.setItem("cpb_exit_intent_shown", "1"); } catch (err) {}
+        markAutoModalShown();
         openTunnel();
         track("exit_intent_shown", {});
       });
